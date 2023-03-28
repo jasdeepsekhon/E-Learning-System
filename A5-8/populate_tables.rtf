@@ -1,0 +1,352 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2707
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;\f1\fnil\fcharset0 Menlo-Bold;}
+{\colortbl;\red255\green255\blue255;\red46\green174\blue187;\red0\green0\blue0;\red159\green160\blue28;
+\red47\green180\blue29;}
+{\*\expandedcolortbl;;\cssrgb\c20196\c73240\c78250;\csgray\c0;\cssrgb\c68468\c68012\c14208;
+\cssrgb\c20238\c73898\c14947;}
+\margl1440\margr1440\vieww20840\viewh11600\viewkind0
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf2 \CocoaLigature0 #!/bin/sh\cf3 \
+\cf2 #export LD_LIBRARY_PATH=/usr/lib/oracle/12.1/client64/lib\cf3 \
+sqlplus64 
+\f1\b \cf4 \'93user/pass@(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(Host=oracle.scs.ryerson.ca)(Port=1521))(CONNECT_DATA=(SID=orcl)))"
+\f0\b0 \cf3  \cf5 <<\cf3 EOF\
+\
+insert into first_user VALUES \cf5 (\cf3 3, 1, 
+\f1\b \cf4 'Jasdeep'
+\f0\b0 \cf3 ,
+\f1\b \cf4 'Sekhon'
+\f0\b0 \cf5 );\cf3 \
+insert into first_user values \cf5 (\cf3 369369, 01, 
+\f1\b \cf4 'Jessica'
+\f0\b0 \cf3 , 
+\f1\b \cf4 'sekhon'
+\f0\b0 \cf5 );\cf3 \
+insert into first_user values \cf5 (\cf3 112233, 01, 
+\f1\b \cf4 'Joe'
+\f0\b0 \cf3 , 
+\f1\b \cf4 'Rogan'
+\f0\b0 \cf5 );\cf3 \
+insert into first_user values \cf5 (\cf3 999999, 01, 
+\f1\b \cf4 'Jessica'
+\f0\b0 \cf3 , 
+\f1\b \cf4 'Biel'
+\f0\b0 \cf5 );\cf3 \
+insert into first_user values \cf5 (\cf3 123456, 01, 
+\f1\b \cf4 'Tristan'
+\f0\b0 \cf3 , 
+\f1\b \cf4 'Davidson'
+\f0\b0 \cf5 );\cf3 \
+insert into first_user values \cf5 (\cf3 888888, 01, 
+\f1\b \cf4 'Johnson'
+\f0\b0 \cf3 , 
+\f1\b \cf4 'Smith'
+\f0\b0 \cf5 );\cf3 \
+insert into first_user values \cf5 (\cf3 333333, 01, 
+\f1\b \cf4 'Niki'
+\f0\b0 \cf3 , 
+\f1\b \cf4 'Daphney'
+\f0\b0 \cf5 );\cf3 \
+insert into first_user values \cf5 (\cf3 444444, 01, 
+\f1\b \cf4 'Manjot'
+\f0\b0 \cf3 , 
+\f1\b \cf4 'Singh'
+\f0\b0 \cf5 );\cf3 \
+insert into first_user values \cf5 (\cf3 111111, 01, 
+\f1\b \cf4 'Becky'
+\f0\b0 \cf3 , 
+\f1\b \cf4 'Johal'
+\f0\b0 \cf5 );\cf3 \
+insert into first_user values \cf5 (\cf3 528528, 01, 
+\f1\b \cf4 'Nikola'
+\f0\b0 \cf3 , 
+\f1\b \cf4 'Tesla'
+\f0\b0 \cf5 );\cf3 \
+insert into first_user values \cf5 (\cf3 999333, 02, 
+\f1\b \cf4 'Abdol'
+\f0\b0 \cf3 , 
+\f1\b \cf4 'Abhari'
+\f0\b0 \cf5 );\cf3 \
+insert into first_user values \cf5 (\cf3 343434, 02, 
+\f1\b \cf4 'Isaac'
+\f0\b0 \cf3 , 
+\f1\b \cf4 'Woungang'
+\f0\b0 \cf5 );\cf3 \
+insert into first_user values \cf5 (\cf3 898989, 02, 
+\f1\b \cf4 'Jelena'
+\f0\b0 \cf3 , 
+\f1\b \cf4 'Misic'
+\f0\b0 \cf5 );\cf3 \
+insert into first_user values \cf5 (\cf3 898981, 02, 
+\f1\b \cf4 'Lester'
+\f0\b0 \cf3 , 
+\f1\b \cf4 'Hirakyi'
+\f0\b0 \cf5 );\cf3 \
+insert into first_user values \cf5 (\cf3 424242, 03, 
+\f1\b \cf4 'Muhammed'
+\f0\b0 \cf3 , 
+\f1\b \cf4 'Amir'
+\f0\b0 \cf5 );\cf3 \
+insert into first_user values \cf5 (\cf3 121212, 03, 
+\f1\b \cf4 'Tajali'
+\f0\b0 \cf3 , 
+\f1\b \cf4 'Ahmed'
+\f0\b0 \cf5 );\cf3 \
+insert into first_user values \cf5 (\cf3 848484, 03, 
+\f1\b \cf4 'John'
+\f0\b0 \cf3 , 
+\f1\b \cf4 'Fish'
+\f0\b0 \cf5 );\cf3 \
+insert into first_user values \cf5 (\cf3 893838, 03, 
+\f1\b \cf4 'Malahi'
+\f0\b0 \cf3 , 
+\f1\b \cf4 'Kumon'
+\f0\b0 \cf5 );\cf3 \
+\
+insert into Course values \cf5 (\cf3 510, 3, 2, 
+\f1\b \cf4 'Database Systems'
+\f0\b0 \cf5 );\cf3 \
+insert into Course values \cf5 (\cf3 633, 3, 2, 
+\f1\b \cf4 'Computer Security'
+\f0\b0 \cf5 );\cf3 \
+insert into Course values \cf5 (\cf3 393, 3, 2, 
+\f1\b \cf4 'Unix, C and C++'
+\f0\b0 \cf5 );\cf3 \
+insert into Course values \cf5 (\cf3 420, 3, 2, 
+\f1\b \cf4 'Discrete Structures'
+\f0\b0 \cf5 );\cf3 \
+\
+insert into Student VALUES \cf5 (\cf3 3, 3\cf5 );\cf3 \
+insert into Student values \cf5 (\cf3 369369,369369\cf5 );\cf3 \
+insert into Student values \cf5 (\cf3 112233,112233\cf5 );\cf3 \
+insert into Student values \cf5 (\cf3 999999,999999\cf5 );\cf3 \
+insert into Student values \cf5 (\cf3 123456,123456\cf5 );\cf3 \
+insert into Student values \cf5 (\cf3 888888,888888\cf5 );\cf3 \
+insert into Student values \cf5 (\cf3 333333,333333\cf5 );\cf3 \
+insert into Student values \cf5 (\cf3 444444,444444\cf5 );\cf3 \
+insert into Student values \cf5 (\cf3 111111,111111\cf5 );\cf3 \
+insert into Student values \cf5 (\cf3 528528,528528\cf5 );\cf3 \
+\
+insert into Professor values \cf5 (\cf3 999333, 999333\cf5 );\cf3 \
+insert into Professor values \cf5 (\cf3 343434, 343434\cf5 );\cf3 \
+insert into Professor values \cf5 (\cf3 898989, 898989\cf5 );\cf3 \
+insert into Professor values \cf5 (\cf3 898981, 898981\cf5 );\
+\
+\
+\
+\cf3 insert into TA values \cf5 (\cf3 424242, 424242\cf5 );\cf3 \
+insert into TA values \cf5 (\cf3 121212, 121212\cf5 );\cf3 \
+insert into TA values \cf5 (\cf3 848484, 848484\cf5 );\cf3 \
+insert into TA values \cf5 (\cf3 893838,893838\cf5 );\cf3 \
+\
+insert into Permission values \cf5 (\cf3 12345,12354,999333,424242,510\cf5 );\cf3 \
+insert into Permission values \cf5 (\cf3 54321,12435,343434,121212,633\cf5 );\cf3 \
+insert into Permission values \cf5 (\cf3 99999,88888,898989,848484,420\cf5 );\cf3 \
+insert into Permission values \cf5 (\cf3 99989,88828,898981,893838,393\cf5 );\cf3 \
+\
+insert into Prerequisite values \cf5 (\cf3 123, 1000, 510\cf5 );\cf3 \
+insert into Prerequisite values \cf5 (\cf3 456, 1000, 633\cf5 );\cf3 \
+insert into Prerequisite values \cf5 (\cf3 789, 1000, 420\cf5 );\cf3 \
+insert into Prerequisite values \cf5 (\cf3 111, 1000, 393\cf5 );\cf3 \
+\
+insert into Section values\cf5 (\cf3 1,
+\f1\b \cf4 'Jessica Sekhon, Joe Rogan'
+\f0\b0 \cf3 ,999333,424242,510\cf5 );\cf3 \
+insert into Section values \cf5 (\cf3 2, 
+\f1\b \cf4 'Jessica Biel, Tristan Davidson, Johnson Smith'
+\f0\b0 \cf3 , 343434,121212, 633\cf5 );\cf3 \
+insert into Section values \cf5 (\cf3 3, 
+\f1\b \cf4 'Niki Daphney, Manjot Singh'
+\f0\b0 \cf3 ,898981,893838,393\cf5 );\cf3 \
+insert into Section values \cf5 (\cf3 4, 
+\f1\b \cf4 'Becky Johal, Nikola Tesla'
+\f0\b0 \cf3 , 898989, 848484, 420\cf5 );\cf3 \
+\
+insert into Lecture_Material values \cf5 (\cf3 20210910, 
+\f1\b \cf4 'Course Outline'
+\f0\b0 \cf5 );\cf3 \
+\
+\
+insert into Course_List values \cf5 (\cf3 999333, 510\cf5 );\cf3 \
+insert into Course_List values \cf5 (\cf3 343434, 633\cf5 );\cf3 \
+insert into Course_List values \cf5 (\cf3 898981,393\cf5 );\cf3 \
+insert into Course_List values \cf5 (\cf3 898989,420\cf5 );\cf3 \
+\
+insert into Tests values\cf5 (\cf3 20210912, 25, 
+\f1\b \cf4 'Complete'
+\f0\b0 \cf3 ,1,510,369369\cf5 );\cf3 \
+insert into Tests values \cf5 (\cf3 20212939, 25, 
+\f1\b \cf4 'Complete'
+\f0\b0 \cf3 , 1, 510,112233\cf5 );\cf3 \
+insert into Tests values \cf5 (\cf3 20211011, 40, 
+\f1\b \cf4 'Complete'
+\f0\b0 \cf3 ,2, 633, 999999\cf5 );\cf3 \
+insert into Tests values \cf5 (\cf3 19239123, 35, 
+\f1\b \cf4 'Complete'
+\f0\b0 \cf3 ,2, 633, 888888\cf5 );\cf3 \
+insert into Tests values \cf5 (\cf3 12389123, 20, 
+\f1\b \cf4 'Not Complete'
+\f0\b0 \cf3 , 2, 633, 123456\cf5 );\cf3 \
+insert into Tests values \cf5 (\cf3 123923929, 10, 
+\f1\b \cf4 'Complete'
+\f0\b0 \cf3 , 3, 393,333333 \cf5 );\cf3 \
+insert into Tests values \cf5 (\cf3 12189238, 10, 
+\f1\b \cf4 'Complete'
+\f0\b0 \cf3 ,3, 393, 444444\cf5 );\cf3 \
+insert into Tests values \cf5 (\cf3 19238192, 50, 
+\f1\b \cf4 'Complete'
+\f0\b0 \cf3 ,4, 420, 111111\cf5 );\cf3 \
+insert into Tests values \cf5 (\cf3 12192839, 50, 
+\f1\b \cf4 'Complete'
+\f0\b0 \cf3 ,4, 420,528528\cf5 );\cf3 \
+\
+insert into Assignments values\cf5 (\cf3 20210912, 25, 
+\f1\b \cf4 'Complete'
+\f0\b0 \cf3 ,1,510,369369\cf5 );\cf3 \
+insert into Assignments values \cf5 (\cf3 20212939, 25, 
+\f1\b \cf4 'Complete'
+\f0\b0 \cf3 , 1, 510,112233\cf5 );\cf3 \
+insert into Assignments values \cf5 (\cf3 20211011, 40, 
+\f1\b \cf4 'Complete'
+\f0\b0 \cf3 ,2, 633, 999999\cf5 );\cf3 \
+insert into Assignments values \cf5 (\cf3 19239123, 35, 
+\f1\b \cf4 'Complete'
+\f0\b0 \cf3 ,2, 633, 888888\cf5 );\cf3 \
+insert into Assignments values \cf5 (\cf3 12389123, 20, 
+\f1\b \cf4 'Not Complete'
+\f0\b0 \cf3 , 2, 633, 123456\cf5 );\cf3 \
+insert into Assignments values \cf5 (\cf3 123923929, 10, 
+\f1\b \cf4 'Complete'
+\f0\b0 \cf3 , 3, 393,333333 \cf5 );\cf3 \
+insert into Assignments values \cf5 (\cf3 12189238, 10, 
+\f1\b \cf4 'Complete'
+\f0\b0 \cf3 ,3, 393, 444444\cf5 );\cf3 \
+insert into Assignments values \cf5 (\cf3 19238192, 50, 
+\f1\b \cf4 'Complete'
+\f0\b0 \cf3 ,4, 420, 111111\cf5 );\cf3 \
+insert into Assignments values \cf5 (\cf3 12192839, 50, 
+\f1\b \cf4 'Complete'
+\f0\b0 \cf3 ,4, 420,528528\cf5 );\cf3 \
+\
+insert into Grades values \cf5 (
+\f1\b \cf4 'Yes'
+\f0\b0 \cf3 ,90,
+\f1\b \cf4 'Yes'
+\f0\b0 \cf3 ,88,1, 510,369369\cf5 );\cf3 \
+insert into Grades values \cf5 (
+\f1\b \cf4 'Yes'
+\f0\b0 \cf3 ,69,
+\f1\b \cf4 'Yes'
+\f0\b0 \cf3 ,96,1, 510,112233\cf5 );\cf3 \
+insert into Grades values \cf5 (
+\f1\b \cf4 'Yes'
+\f0\b0 \cf3 ,92,
+\f1\b \cf4 'Yes'
+\f0\b0 \cf3 ,75,2, 633,999999\cf5 );\cf3 \
+insert into Grades values \cf5 (
+\f1\b \cf4 'Yes'
+\f0\b0 \cf3 ,90,
+\f1\b \cf4 'Yes'
+\f0\b0 \cf3 ,90,2, 633,888888\cf5 );\cf3 \
+insert into Grades values \cf5 (
+\f1\b \cf4 'No'
+\f0\b0 \cf3 ,92, 
+\f1\b \cf4 'No'
+\f0\b0 \cf3 , 88,2, 633,123456\cf5 );\cf3 \
+insert into Grades values \cf5 (
+\f1\b \cf4 'Yes'
+\f0\b0 \cf3 ,99,
+\f1\b \cf4 'Yes'
+\f0\b0 \cf3 ,89,3, 393,333333\cf5 );\cf3 \
+insert into Grades values \cf5 (
+\f1\b \cf4 'Yes'
+\f0\b0 \cf3 ,66,
+\f1\b \cf4 'Yes'
+\f0\b0 \cf3 ,99,3, 393,444444\cf5 );\cf3 \
+insert into Grades values \cf5 (
+\f1\b \cf4 'Yes'
+\f0\b0 \cf3 ,85,
+\f1\b \cf4 'Yes'
+\f0\b0 \cf3 ,87,4, 420,111111\cf5 );\cf3 \
+insert into Grades values \cf5 (
+\f1\b \cf4 'Yes'
+\f0\b0 \cf3 ,89,
+\f1\b \cf4 'Yes'
+\f0\b0 \cf3 ,98,4, 420,528528\cf5 );\cf3 \
+\
+insert into Discussion_Board values \cf5 (
+\f1\b \cf4 'Database ER Diagram Discussion'
+\f0\b0 \cf3 , 1, 510,20210912\cf5 );\cf3 \
+insert into Discussion_Board values \cf5 (
+\f1\b \cf4 'SQL Tables and Queries Discussion'
+\f0\b0 \cf3 , 1, 510, 20212939\cf5 );\cf3 \
+insert into Discussion_Board values \cf5 (
+\f1\b \cf4 'SetUID Lab Discussion'
+\f0\b0 \cf3 ,2,633,20211011\cf5 );\cf3 \
+insert into Discussion_Board values \cf5 (
+\f1\b \cf4 'MD5 Collision Attack'
+\f0\b0 \cf3 ,2, 633, 19239123\cf5 );\cf3 \
+insert into Discussion_Board values \cf5 (
+\f1\b \cf4 'Strong Induction Questions'
+\f0\b0 \cf3 ,4,420,19238192\cf5 );\cf3 \
+\
+insert into Course_Offerings values\cf5 (
+\f1\b \cf4 'Winter Term'
+\f0\b0 \cf3 , 
+\f1\b \cf4 '3rd Year'
+\f0\b0 \cf3 ,
+\f1\b \cf4 'Database Systems'
+\f0\b0 \cf3 ,
+\f1\b \cf4 'Computer Science'
+\f0\b0 \cf3 ,999333,424242, 510\cf5 );\cf3 \
+insert into Course_Offerings values\cf5 (
+\f1\b \cf4 'Winter Term'
+\f0\b0 \cf3 , 
+\f1\b \cf4 '3rd Year'
+\f0\b0 \cf3 ,
+\f1\b \cf4 'Computer Security'
+\f0\b0 \cf3 ,
+\f1\b \cf4 'Computer Science'
+\f0\b0 \cf3 ,343434,121212, 633\cf5 );\cf3 \
+insert into Course_Offerings values \cf5 (
+\f1\b \cf4 'Fall Term'
+\f0\b0 \cf3 , 
+\f1\b \cf4 '2nd year'
+\f0\b0 \cf3 , 
+\f1\b \cf4 'Unix, C and C++'
+\f0\b0 \cf3 , 
+\f1\b \cf4 'Computer Science'
+\f0\b0 \cf3 ,898981, 893838, 393\cf5 );\cf3 \
+insert into Course_Offerings values \cf5 (
+\f1\b \cf4 'Fall Term'
+\f0\b0 \cf3 , 
+\f1\b \cf4 '2nd year'
+\f0\b0 \cf3 , 
+\f1\b \cf4 'Discrete Structures'
+\f0\b0 \cf3 , 
+\f1\b \cf4 'Computer Science'
+\f0\b0 \cf3 ,898989,848484 , 420\cf5 );\cf3 \
+\
+\
+insert into enrolled values\cf5 (\cf3 510,369369\cf5 );\cf3 \
+insert into enrolled values\cf5 (\cf3 510,112233\cf5 );\cf3 \
+insert into enrolled values \cf5 (\cf3 633,999999\cf5 );\cf3 \
+insert into enrolled values\cf5 (\cf3 633,123456\cf5 );\cf3 \
+insert into enrolled values\cf5 (\cf3 633,888888\cf5 );\cf3 \
+insert into enrolled values\cf5 (\cf3 393,333333\cf5 );\cf3 \
+insert into enrolled values\cf5 (\cf3 393,444444\cf5 );\cf3 \
+insert into enrolled values\cf5 (\cf3 420,111111\cf5 );\cf3 \
+insert into enrolled values\cf5 (\cf3 420,528528\cf5 );\cf3 \
+\
+insert into checks values\cf5 (\cf3 510,123\cf5 );\cf3 \
+insert into checks values\cf5 (\cf3 633,456\cf5 );\cf3 \
+insert into checks values\cf5 (\cf3 393,789\cf5 );\cf3 \
+insert into checks values\cf5 (\cf3 420,111\cf5 );\cf3 \
+\
+insert into creates values\cf5 (\cf3 999333,510\cf5 );\cf3 \
+insert into creates values\cf5 (\cf3 343434,633\cf5 );\cf3 \
+insert into creates values\cf5 (\cf3 898981,393\cf5 );\cf3 \
+insert into creates values\cf5 (\cf3 898989,420\cf5 );\cf3 \
+\
+}

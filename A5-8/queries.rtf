@@ -1,0 +1,267 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2707
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;\f1\fnil\fcharset0 Menlo-Bold;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red46\green174\blue187;\red159\green160\blue28;
+\red47\green180\blue29;\red20\green153\blue2;}
+{\*\expandedcolortbl;;\csgray\c0;\cssrgb\c20196\c73240\c78250;\cssrgb\c68468\c68012\c14208;
+\cssrgb\c20238\c73898\c14947;\cssrgb\c0\c65000\c0;}
+\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf2 \CocoaLigature0 \
+\cf3 #!/bin/sh\cf2 \
+\cf3 #export LD_LIBRARY_PATH=/usr/lib/oracle/12.1/client64/lib\cf2 \
+sqlplus64 
+\f1\b \cf4 \'93user/pass@(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(Host=oracle.scs.ryerson.ca)(Port=1521))(CONNECT_DATA=(SID=orcl)))"
+\f0\b0 \cf2  \cf5 <<\cf2 EOF\
+\
+/*\
+Queries\cf5 :\cf2  Table 1\
+*/\
+SELECT *\
+FROM first_user\
+WHERE userType \cf5 =\cf2 1\cf5 ;\cf2 \
+\
+SELECT *\
+FROM first_user\
+WHERE userType \cf5 =\cf2 2\cf5 ;\cf2 \
+\
+SELECT *\
+FROM first_user\
+WHERE userType \cf5 =\cf2 3\cf5 ;\cf2 \
+\
+SELECT *\
+FROM first_user\
+ORDER BY userType DESC\cf5 ;\cf2 \
+\
+/*\
+Queries\cf5 :\cf2  Table 2\
+*/\
+\
+SELECT CourseID, Coursename\
+FROM   Course\
+ORDER BY CourseID DESC\cf5 ;\cf2 \
+\
+/*\
+Queries\cf5 :\cf2  Table 3\cb6  \cb1 \
+*/\
+SELECT studentID,userID\
+FROM Student\
+ORDER BY userid DESC\cf5 ;\cf2 \
+\
+/*\
+Queries\cf5 :\cf2  Table 4\
+*/\
+\
+SELECT professorID, userID\
+FROM PROFESSOR\
+ORDER BY userID DESC\cf5 ;\cf2 \
+\
+/*\
+Queries\cf5 :\cf2  Table 5\
+*/\
+\
+SELECT taID, userID\
+FROM ta\
+ORDER BY userID DESC\cf5 ;\cf2 \
+\
+\
+/*\
+Queries\cf5 :\cf2  Table 6\
+*/\
+SELECT courseID\cb6  \cb1 \
+FROM permission\
+where taid \cf5 =\cf2  121212\cf5 ;\cf2 \
+\
+/*\
+Queries\cf5 :\cf2  Table 7\
+*/\
+SELECT classList, courseID, studentID\
+FROM   section, student\
+WHERE  sectionID \cf5 =\cf2  1\
+       AND  professorID \cf5 =\cf2  999333\
+ORDER BY StudentID ASC\cf5 ;\cf2 \
+\
+\
+/*\
+Query \cf5 for\cf2  Lecture Materials Table\
+*/\
+SELECT *\
+FROM Lecture_Material, Course\
+WHERE courseName LIKE 
+\f1\b \cf4 'D%'
+\f0\b0 \cf5 ;\cf2 \
+\
+/*\
+Query \cf5 for\cf2  Course List Table\
+*/\
+SELECT DISTINCT *\
+FROM Course_List, Course\cf5 ;\cf2 \
+\
+/*\
+Query \cf5 for\cf2  Tests Table\
+*/\
+SELECT Tests.courseID, Course.courseName, Tests.studentID, Tests.testID, Tests.testWeight, Tests.testEvaluationStatus, Grades.testResult\
+FROM Tests\
+INNER JOIN Course\
+ON Tests.courseID \cf5 =\cf2  Course.courseID\
+INNER JOIN Grades\
+ON Tests.courseID \cf5 =\cf2  Grades.courseID\cf5 ;\cf2 \
+\
+/*\
+Query \cf5 for\cf2  Assignments Table\
+*/\
+SELECT *\
+FROM Assignments\
+LEFT JOIN Course\cb6  \cb1 \
+ON Assignments.courseID \cf5 =\cf2  Course.courseID\cf5 ;\cf2 \
+\
+/*\
+\
+/*\
+Query \cf5 for\cf2  Grades Table\
+*/\
+SELECT Grades.testCompletion, Grades.testResult, Tests.testWeight\
+FROM Grades\
+LEFT JOIN Tests\cb6  \cb1 \
+ON Grades.studentID \cf5 =\cf2  Tests.studentID \cf5 ;\cf2 \
+\
+/*\
+Query \cf5 for\cf2  Discussion Board Table\
+*/\
+SELECT DISTINCT sectionID, discussionContent, courseID, assignmentID\
+FROM Discussion_Board\cf5 ;\cf2 \
+\
+/*\
+Query \cf5 for\cf2  Course Offerings Table\
+*/\
+SELECT *\
+FROM Course_Offerings\
+ORDER BY levelOfCourse\cf5 ;\cf2 \
+\
+/*\
+Query \cf5 for\cf2  relational Enrolled Table\
+*/\
+SELECT *\
+FROM enrolled\
+LEFT JOIN Course_List\
+ON enrolled.courseID \cf5 =\cf2  Course_List.courseID\cf5 ;\cf2 \
+\
+/*\
+\
+Query \cf5 for\cf2  relational Checks Table\
+*/\
+SELECT enrolled.courseID, course.courseName, Course_List.professorID,  enrolled.studentID\
+FROM enrolled\
+INNER JOIN Course_List\
+ON enrolled.courseID \cf5 =\cf2  Course_List.courseID\
+INNER JOIN Course\
+ON enrolled.courseID \cf5 =\cf2  Course.courseID\
+WHERE enrolled.courseID LIKE 
+\f1\b \cf4 '633'
+\f0\b0 \cf5 ;\cf2 \
+\
+/*\
+Query \cf5 for\cf2  relational Creates Table\
+*/\cb6  \cb1 \
+SELECT creates.professorID, first_user.firstName, first_user.lastName, creates.courseID, course.courseName\
+FROM creates\
+INNER JOIN first_user\
+ON creates.professorID \cf5 =\cf2  first_user.userID\
+INNER JOIN course\
+ON creates.courseID \cf5 =\cf2  course.courseID\
+WHERE creates.professorID \cf5 >\cf2  
+\f1\b \cf4 '300000'
+\f0\b0 \cf2 \
+ORDER BY creates.professorID\cf5 ;\cf2 \
+\
+/*\
+Checking which students are enrolled \cf5 in\cf2  CPS 510 and have completed their tests\
+\cf5 (\cf2 WHERE EXISTS\cf5 )\cf2 \
+*/\
+\
+SELECT s.studentID\
+FROM Student s\
+WHERE EXISTS\
+\cf5 (\cf2 SELECT t.studentID\
+FROM Tests t\
+WHERE t.testEvaluationStatus \cf5 =\cf2  
+\f1\b \cf4 'Complete'
+\f0\b0 \cf2  AND\
+t.courseID \cf5 =\cf2  510\
+AND t.studentID \cf5 =\cf2  s.studentID\cf5 );\cf2 \
+\
+/*\
+Checking which students did complete completed both their tests and assignments\
+\cf5 (\cf2 UNION\cf5 )\cf2 \
+*/\
+*/\
+\
+SELECT s.studentID\
+FROM Student s\
+WHERE EXISTS\
+\cf5 (\cf2 SELECT t.studentID\
+FROM Tests t\
+WHERE t.testEvaluationStatus \cf5 =\cf2  
+\f1\b \cf4 'Complete'
+\f0\b0 \cf2 \
+AND t.studentID \cf5 =\cf2  s.studentID\cf5 )\cf2 \
+\
+UNION\
+\
+\cf5 (\cf2 SELECT s.studentID\
+FROM Student s\
+WHERE EXISTS\
+\cf5 (\cf2 SELECT a.studentID\
+FROM Assignments a\
+WHERE a.assignmentEvaluationStatus \cf5 =\cf2  
+\f1\b \cf4 'Complete'
+\f0\b0 \cf2 \
+AND a.studentID \cf5 =\cf2  s.studentID\cf5 ));\cf2 \
+\
+/*\
+List of courses not offered \cf5 in\cf2  the Winter Term\
+\cf5 (\cf2 MINUS\cf5 )\cf2 \
+*/\
+\
+SELECT c.subject, c.levelOfCourse, c.program, c.courseID\
+ FROM   Course_Offerings c\
+MINUS\
+SELECT c.subject, c.levelOfCourse, c.program, c.courseID\
+ FROM   Course_Offerings c\
+ WHERE  c.availablity \cf5 =\cf2  
+\f1\b \cf4 'Winter Term'
+\f0\b0 \cf5 ;\cf2 \
+\cb6  \cb1 \
+ /*\
+ Find Average of all students on their test results\
+ \cf5 (\cf2 AVERAGE\cf5 )\cf2 \
+ */\
+\cb6  \cb1 \
+ SELECT 
+\f1\b \cf4 'Average test result is '
+\f0\b0 \cf2 , AVG \cf5 (\cf2 testResult\cf5 )\cf2 \
+ FROM Grades\cf5 ;\cf2 \
+  /*\
+ Find Average of all students \cf5 in\cf2  all sections on their assignment results\
+ \cf5 (\cf2 AVERAGE\cf5 )\cf2 \
+ */\
+\cb6  \cb1 \
+SELECT 
+\f1\b \cf4 'Average test result is '
+\f0\b0 \cf2 , AVG \cf5 (\cf2 assignmentResult\cf5 )\cf2 \
+FROM Grades\cf5 ;\cf2 \
+\
+/*\
+List \cf5 for\cf2  each course, the number of students registered \cf5 for\cf2  the course\
+*/\
+\
+SELECT COUNT\cf5 (\cf2  DISTINCT studentID\cf5 )\cf2  AS Number_Enrolled\
+FROM   enrolled\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\fs16 \
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\fs24 \
+}
